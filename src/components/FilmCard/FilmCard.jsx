@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import VideoPlayer from '../VideoPlayer';
 
 const FilmCard = (props) => {
   const {
     name,
-    poster,
-  } = props.film;
+    previevImg,
+    previevLink,
+  } = props;
 
   return (
     <article className="small-movie-card catalog__movies-card">
-      <div className="small-movie-card__image">
-        <img src={poster} alt={name} width="280" height="175" />
-      </div>
+      <VideoPlayer
+        previevImg = {previevImg}
+        src = {previevLink}
+      />
       <h3 className="small-movie-card__title">
         <a className="small-movie-card__link" href="movie-page.html"> {name} </a>
       </h3>
@@ -20,10 +23,9 @@ const FilmCard = (props) => {
 };
 
 FilmCard.propTypes = {
-  film: {
-    name: PropTypes.string.isRequired,
-    poster: PropTypes.string.isRequired,
-  },
+  name: PropTypes.string.isRequired,
+  previevImg: PropTypes.string.isRequired,
+  previevLink: PropTypes.string.isRequired,
 };
 
 export default FilmCard;

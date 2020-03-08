@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Genres from '../Genres';
 import FilmsList from '../FilmsList';
-import PropTypes from 'prop-types';
 
 const Main = (props) => {
   const {filmsList, genres} = props;
@@ -100,7 +100,8 @@ Main.propTypes = {
       PropTypes.shape({
         id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        poster: PropTypes.string.isRequired,
+        previevImg: PropTypes.string.isRequired,
+        previevLink: PropTypes.string.isRequired,
       })),
 };
 

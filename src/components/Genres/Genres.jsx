@@ -1,6 +1,6 @@
 import React from 'react';
-import Genre from '../Genre';
 import PropTypes from 'prop-types';
+import Genre from '../Genre';
 
 const Genres = (props) => {
   return (
