@@ -52,7 +52,7 @@ class VideoPlayer extends React.Component {
   }
 
   render() {
-    const {src, previevImg} = this.props;
+    const {src, poster} = this.props;
 
     return (
       <div className="small-movie-card__image"
@@ -63,7 +63,7 @@ class VideoPlayer extends React.Component {
           ref = {this._videoRef}
           width = "280"
           height = "175"
-          poster = {previevImg}
+          poster = {poster}
         />
       </div>
     );
@@ -71,7 +71,7 @@ class VideoPlayer extends React.Component {
 }
 
 VideoPlayer.propTypes = {
-  previevImg: PropTypes.string.isRequired,
+  poster: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
 };
 

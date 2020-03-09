@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FilmCard from '../FilmCard';
 
-const FilmsList = (props) => {
+const FilmsList = ({filmsList}) => {
   return (
     <div className="catalog__movies-list">
-      {props.filmsList.map((film) => (
+      {filmsList.map((film) => (
         <FilmCard
           key = {film.id}
           name = {film.name}
-          previevImg = {film.previevImg}
-          previevLink = {film.previevLink}
+          previewImg = {film.previewImg}
+          previewLink = {film.previewLink}
         />
       ))}
     </div>
@@ -22,8 +22,8 @@ FilmsList.propTypes = {
       PropTypes.shape({
         id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        previevImg: PropTypes.string.isRequired,
-        previevLink: PropTypes.string.isRequired,
+        previewImg: PropTypes.string.isRequired,
+        previewLink: PropTypes.string.isRequired,
       })),
 };
 

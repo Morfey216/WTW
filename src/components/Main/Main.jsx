@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Genres from '../Genres';
 import FilmsList from '../FilmsList';
 
-const Main = (props) => {
-  const {filmsList, genres} = props;
-
+const Main = ({filmsList, genres}) => {
   return (
     <React.Fragment>
       <section className="movie-card">
@@ -100,8 +98,8 @@ Main.propTypes = {
       PropTypes.shape({
         id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        previevImg: PropTypes.string.isRequired,
-        previevLink: PropTypes.string.isRequired,
+        previewImg: PropTypes.string.isRequired,
+        previewLink: PropTypes.string.isRequired,
       })),
 };
 
